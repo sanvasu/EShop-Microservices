@@ -3,7 +3,7 @@
 .NET 8 Microservices Web API – Clean Architecture with DDD, CQRS, and SOLID Principles
 This project is a modern .NET 8 Web API implementation that follows Vertical Slice Architecture using Feature folders, and is built around Domain-Driven Design (DDD) and Clean Architecture best practices. It uses CQRS with MediatR, Entity Framework Core, and PostgreSQL, all containerized via Docker for consistent and scalable development and deployment.
 
-✅ ## Key Technologies and Patterns Used
+✅ ** Key Technologies and Patterns Used **
 .NET 8 Web API
 
 Vertical Slice Architecture using Feature folders
