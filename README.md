@@ -24,7 +24,7 @@ Docker & Docker Compose for multi-container orchestration
 
 Auto EF Core migration to SQL Server on application startup (when configured)
 
-📦 Architecture Overview
+📦 <h1>**Architecture Overview**</h1>
 API Layer – Handles HTTP requests and responses.
 
 Application Layer – Contains CQRS commands/queries and business logic via MediatR.
@@ -35,8 +35,8 @@ Infrastructure Layer – Implements data access logic, external services, and re
 
 Persistence Layer – Handles configuration of EF Core and Marten for database interactions.
 
-💡 SOLID Principles in Action
-This solution applies the SOLID principles throughout its architecture:
+💡 <h1>**SOLID Principles in Action**</h1>
+This solution applies the SOLID principles throughout the project:
 
 S – Single Responsibility Principle (SRP)
 Each class has one reason to change. For example, commands handle only user actions, and repositories only manage data access.
@@ -53,7 +53,7 @@ Interfaces are small and focused (e.g., separating read and write repositories),
 D – Dependency Inversion Principle (DIP)
 High-level modules (business logic) depend on abstractions, not on infrastructure details. Dependency Injection is used throughout the application.
 
-⚙️ Features Implemented
+⚙️ <h1>**Features Implemented**</h1>
 Feature-based Vertical Slice structure for modular development
 
 CQRS with Command and Query Handlers via MediatR
