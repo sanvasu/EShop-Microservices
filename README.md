@@ -3,7 +3,7 @@
 .NET 8 Microservices Web API – Clean Architecture with DDD, CQRS, and SOLID Principles
 This project is a modern .NET 8 Web API implementation that follows Vertical Slice Architecture using Feature folders, and is built around Domain-Driven Design (DDD) and Clean Architecture best practices. It uses CQRS with MediatR, Entity Framework Core, and PostgreSQL, all containerized via Docker for consistent and scalable development and deployment.
 
-✅<h1>**Key Technologies and Patterns Used**</h1>
+<h1>**Key Technologies and Patterns Used**</h1>
 .NET 8 Web API
 
 Vertical Slice Architecture using Feature folders
@@ -24,7 +24,7 @@ Docker & Docker Compose for multi-container orchestration
 
 Auto EF Core migration to SQL Server on application startup (when configured)
 
-📦<h1>**Architecture Overview**</h1>
+<h1>**Architecture Overview**</h1>
 API Layer – Handles HTTP requests and responses.
 
 Application Layer – Contains CQRS commands/queries and business logic via MediatR.
@@ -35,7 +35,7 @@ Infrastructure Layer – Implements data access logic, external services, and re
 
 Persistence Layer – Handles configuration of EF Core and Marten for database interactions.
 
-💡<h1>**SOLID Principles in Action**</h1>
+<h1>**SOLID Principles in Action**</h1>
 This solution applies the SOLID principles throughout the project:
 
 S – Single Responsibility Principle (SRP)
@@ -53,7 +53,7 @@ Interfaces are small and focused (e.g., separating read and write repositories),
 D – Dependency Inversion Principle (DIP)
 High-level modules (business logic) depend on abstractions, not on infrastructure details. Dependency Injection is used throughout the application.
 
-⚙️<h1>**Features Implemented**</h1>
+<h1>**Features Implemented**</h1>
 Feature-based Vertical Slice structure for modular development
 
 CQRS with Command and Query Handlers via MediatR
