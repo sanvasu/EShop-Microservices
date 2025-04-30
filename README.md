@@ -1,17 +1,67 @@
 # EShopMicroservice
 
-ASPNET Core 8 Web API Development of Microservices
+.NET 8 Microservices Web API – Clean Architecture with DDD, CQRS, and SOLID Principles
+This project is a modern .NET 8 Web API implementation that follows Vertical Slice Architecture using Feature folders, and is built around Domain-Driven Design (DDD) and Clean Architecture best practices. It uses CQRS with MediatR, Entity Framework Core, and PostgreSQL, all containerized via Docker for consistent and scalable development and deployment.
 
-Vertical Slice Architecture implementation with Feature folders
+✅ Key Technologies and Patterns Used
+.NET 8 Web API
 
-PostgreSQL database connection and containerization
+Vertical Slice Architecture using Feature folders
 
-Using Entity Framework Core ORM and auto migrate to SqlServer when application startup
+CQRS Pattern using MediatR
 
-Implementing DDD, CQRS, and Clean Architecture with using Best Practices
+DDD (Domain-Driven Design)
 
-CQRS implementation using MediatR library
+Clean Architecture to enforce separation of concerns
 
-Marten library for .NET Transactional Document DB on PostgreSQL
+Entity Framework Core for ORM
 
-Dockerfile and docker-compose file for running Multi-container Docker environment
+Marten DB for transactional NoSQL (PostgreSQL-backed) document storage
+
+PostgreSQL database with containerized environment
+
+Docker & Docker Compose for multi-container orchestration
+
+Auto EF Core migration to SQL Server on application startup (when configured)
+
+📦 Architecture Overview
+API Layer – Handles HTTP requests and responses.
+
+Application Layer – Contains CQRS commands/queries and business logic via MediatR.
+
+Domain Layer – Contains core domain entities, value objects, and interfaces (pure business rules).
+
+Infrastructure Layer – Implements data access logic, external services, and repositories.
+
+Persistence Layer – Handles configuration of EF Core and Marten for database interactions.
+
+💡 SOLID Principles in Action
+This solution applies the SOLID principles throughout its architecture:
+
+S – Single Responsibility Principle (SRP)
+Each class has one reason to change. For example, commands handle only user actions, and repositories only manage data access.
+
+O – Open/Closed Principle (OCP)
+The system is open to extension but closed for modification. New features are added via new feature folders without altering existing logic.
+
+L – Liskov Substitution Principle (LSP)
+Interfaces are designed so that any implementation (e.g., ICustomerRepository) can be replaced without affecting client code.
+
+I – Interface Segregation Principle (ISP)
+Interfaces are small and focused (e.g., separating read and write repositories), avoiding "fat" interfaces.
+
+D – Dependency Inversion Principle (DIP)
+High-level modules (business logic) depend on abstractions, not on infrastructure details. Dependency Injection is used throughout the application.
+
+⚙️ Features Implemented
+Feature-based Vertical Slice structure for modular development
+
+CQRS with Command and Query Handlers via MediatR
+
+Auto EF Core migrations at startup (SQL Server compatible)
+
+Transactional Document DB setup using Marten on PostgreSQL
+
+Fully containerized with Dockerfile and docker-compose.yml
+
+Clean separation of business logic, infrastructure, and API concerns
